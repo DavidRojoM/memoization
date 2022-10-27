@@ -65,10 +65,13 @@ async function noMemoBenchmark() {
     }
   }
   console.log(
-    `----------------------------\nAverage time not using memoization: ${
-      time / tries
-    } milliseconds.\n----------------------------`
+    `\n--------------------------------------------------------\n [NO-MEMO] SUMMARY: \n--------------------------------------------------------\n`
   );
+  console.table({
+    "Average time": time / tries,
+    "Total time": time,
+  });
+  console.log(`\n--------------------------------------------------------\n`);
 }
 
 async function memoBenchmark() {
@@ -92,10 +95,13 @@ async function memoBenchmark() {
     }
   }
   console.log(
-    `----------------------------\nAverage time using memoization: ${
-      time / tries
-    } milliseconds.\n----------------------------`
+    `\n--------------------------------------------------------\n [MEMO] SUMMARY: \n--------------------------------------------------------\n`
   );
+  console.table({
+    "Average time": time / tries,
+    "Total time": time,
+  });
+  console.log(`\n--------------------------------------------------------\n`);
 }
 
 const benchmark = async () => {
