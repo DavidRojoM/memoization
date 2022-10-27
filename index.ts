@@ -1,10 +1,10 @@
-const delay = 5; //ms -> higher the delay, the more the difference between memoized and non-memoized
+const delay = 0; //ms -> higher the delay, the more the difference between memoized and non-memoized
 const tries = 1000; // -> higher the tries, higher the memoization odds;
 const randomizer = 10; // -> higher the randomizer, lesser the memoization odds;
 const displayFirstAndLastResults = 10; // -> (tries / 2) to display every result;
 
 if (
-  delay <= 0 ||
+  delay < 0 ||
   tries <= 0 ||
   randomizer <= 0 ||
   displayFirstAndLastResults < 0
