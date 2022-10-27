@@ -5,3 +5,5 @@ This is a simple test to show memoization capabilities
 ```bash
 npx ts-node index.ts
 ```
+
+![](https://i.imgur.com/KWDw8jU.png)
